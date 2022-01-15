@@ -61,6 +61,10 @@
       color: #3A3A3A;
       font-size: 16px;
       font-weight: 600;
+      transition: 0.3s ease-in-out;
+ }
+ .navigation li a:hover{
+      color: #FB8200;
  }
 
  /* --------------------------------
@@ -252,7 +256,7 @@
  -----------------------------*/
 footer{
     background-color: #0A0826;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
  .footer-info{
