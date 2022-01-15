@@ -135,6 +135,7 @@
      grid-template-columns: repeat(3, 1fr);
      justify-content: space-between;
      gap: 30px;
+     margin-bottom: 50px;
     
  }
 .product{
@@ -188,6 +189,16 @@
     color: #787885;
     font-weight: 700;
     line-height: 1.5;
+}
+.link-button{
+    color: rgba(224, 44, 109, 0.87);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    float: right;
+}
+.link-button .icon{
+    margin-left: 5px;
 }
 /* ---------------------------
      people-says styles 
@@ -354,6 +365,9 @@ footer{
     .banner{
         grid-template-columns: 1fr;  
         text-align: center;
+    }
+    .banner-left h1{
+        font-size: 28px;
     }
     .banner-left{
         order: 2;
