@@ -22,12 +22,20 @@
     margin-bottom: 50px;
     text-align: center;
  }
+ main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .orange{
+     color: #FB8200;
+ }
  /* ---------------------------
      header nav styles 
  -----------------------------*/
  header{
-     height: 100vh;
-     min-height: 600px;
+     height: 80%;
  }
  nav{
      display: flex;
@@ -54,6 +62,19 @@
       font-size: 16px;
 
  }
+
+ /* --------------------------------
+   nav-toggler-icon styles
+----------------------------------- */
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+    color: #3A3A3A;
+    font-size: 30px;
+}
+
   /* ---------------------------
      banner styles 
  -----------------------------*/
@@ -61,7 +82,7 @@
      display: grid;
      grid-template-columns: 1fr 1fr;
      gap: 50px;
-     justify-content: space-between;
+     height: calc(100vh - 80%);
      align-items: center;
       
  }
@@ -117,7 +138,7 @@
     
  }
 .product{
-    width: 350px;
+    width: 300px;
     height: 490px;
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
@@ -130,7 +151,7 @@
     width: 100%;   
 }
 .product-details .photo img{
-    width: 320px;
+    width: 270px;
     height: 256px;   
     object-fit: cover;
     border-radius: 5px;
@@ -168,12 +189,60 @@
     font-weight: 700;
     line-height: 1.5;
 }
+/* ---------------------------
+     people-says styles 
+ -----------------------------*/
+.people-says{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.people-photo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    text-align: center;
+    border: 5px solid #FB8200;
+}
+.people-says h3{
+     font-size: 28px;
+     color: #3A3A3A;
+     margin: 2px 0;
+     font-weight: 600;
+}
+.people-says .designation{
+     font-size: 18px;
+     color: #787878;
+     margin: 2px 0;
+}
+.people-says p{
+     font-size: 16px;
+     color: #787878;
+     text-align: center;
+     padding: 0 60px;
+     line-height: 1.5;
+     margin-top: 30px;
+
+}
+.bullet{
+    
+    margin-top: -10px;
+}
+.bullet span{
+    font-size: 50px;
+    padding: 0 8px;
+}
+.bullet span:hover{
+     color: #FB8200;
+     cursor: pointer;
+}
  /* ---------------------------
      footer styles 
  -----------------------------*/
 footer{
     background-color: #0A0826;
-    height: 239px;
     margin-top: 100px;
 }
 
@@ -215,4 +284,86 @@ footer{
     border-radius: 32px;
     line-height: 32px;
     padding: 8px;
+}
+
+
+ /* ---------------------------
+     media query 
+ -----------------------------*/
+ @media (max-width:992px) {
+
+    nav{
+        flex-direction: row-reverse;
+        
+    }
+
+    .nav-toggler-icon{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFFFFF;
+        padding: 20px 0;
+        transform: translateY(-600px);
+        transition: .5s ease-in-out;
+    }
+    .navigation li{
+        margin: 10px 0;
+         
+         
+      
+    }
+    .navigation li a{
+        color: #222;
+      
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
+    }
+    
+    
+    .banner-left h1{
+        font-size: 35px;
+    }
+    .popular-products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+ @media (max-width:800px) {
+
+    .header-title{
+        text-align: center;
+    }
+
+    nav{
+        display: block;
+        
+    }
+    .nav-toggler-icon{
+        display: block;
+        margin-top: -64px;
+    }
+
+    .banner{
+        grid-template-columns: 1fr;  
+        text-align: center;
+    }
+    .banner-left{
+        order: 2;
+    }
+    .banner-right img{
+        width: 70%;
+    }
+    .popular-products{
+        grid-template-columns: 1fr;
+         
+    }
+
 }
