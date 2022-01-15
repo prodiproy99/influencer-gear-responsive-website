@@ -27,6 +27,7 @@
  -----------------------------*/
  header{
      height: 100vh;
+     min-height: 600px;
  }
  nav{
      display: flex;
@@ -107,15 +108,16 @@
   /* ---------------------------
      company-logos styles 
  -----------------------------*/
- .logos{
-    margin: 50px 0;
+ .company-logos{
+    margin-top: 50px;
+    margin-bottom: 50px;
  }
  .company-logo{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-content: space-between;
     align-items: center;
-   padding: 10px 20px;
+    padding: 10px 20px;
  }
  
 .logo img{
@@ -189,4 +191,51 @@ hr{
     color: #787885;
     font-weight: 700;
     line-height: 1.5;
+}
+ /* ---------------------------
+     footer styles 
+ -----------------------------*/
+ footer{
+     background-color: #0A0826;
+     text-align: center;
+     color: #fff;
+     margin-top: 100px;
+     height: 239px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ footer h3{
+     font-size: 24px;
+     font-weight: 600;
+     margin: 8px;
+ }
+ footer small{
+     font-size: 14px;
+     font-weight: 700;
+ }
+.social-icon .icons{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.social-icon .icons li{
+    margin: 0 16px;
+    
+    
+}
+.social-icon .icons li a{
+    text-decoration: none;
+   
+}
+.social-icon .icons .icon{
+    color: #fff;
+    background-color: #22213C;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    line-height: 32px;
+    padding: 8px;
 }
